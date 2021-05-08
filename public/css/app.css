@@ -42,8 +42,7 @@ body {
   flex-wrap: wrap;
 }
 .cards .card {
-  width: calc(100% / 3)-20px;
-  margin: 10px;
+  width: calc(100% / 3);
 }
 .cards .card img {
   display: block;
