@@ -140,6 +140,83 @@ Route::get('/', function () {
     $lunga = [];
     $corta = [];
     $cortissima = [];
+    $info = [
+        [
+            "name" => "Ragione sociale: ",
+            "text" => "La Molisana S.P.A.",
+            "alert" => ""
+        ],
+        [
+            "name" => "Sede legale: ",
+            "text" => "Contrada Colle delle Api, 100/A 86100 - Campobasso (CB)",
+            "alert" => ""
+        ],
+        [
+            "name" => "Pec: ",
+            "text" => "lamolisana@pec.it",
+            "alert" => ""
+        ],
+        [
+            "name" => "Tel: ",
+            "text" => "+39 0874 4981",
+            "alert" => ""
+        ],
+        [
+            "name" => "Fax: ",
+            "text" => "+39 0874 629584",
+            "alert" => ""
+        ],
+        [
+            "name" => "",
+            "text" => "info@lamolisana.it",
+            "alert" => "(per segnalazioni degli utenti)"
+        ],
+        [
+            "name" => "",
+            "text" => "commerciale@lamolisana.it",
+            "alert" => ""
+        ],
+        [
+            "name" => "",
+            "text" => "export@lamolisana.it",
+            "alert" => ""
+        ],
+        [
+            "name" => "Numero verde: ",
+            "text" => 800818081,
+            "alert" => ""
+        ],
+        [
+            "name" => "Telefono: ",
+            "text" => 3801292455,
+            "alert" => ""
+        ]
+    ];
+    $pastifici = [
+        "Il Pastificio",
+        "Grano decorticato a pietra",
+        "Il Molise c'è",
+        "Filiera Integrata",
+        "100 anni di pasta",
+        "Sartoria della pasta",
+        "Spaghetto Quadrato",
+        "Le Persone"
+    ];
+    $collezioni = [
+        "Collezione da Chef",
+        "Grandi Cucine",
+        "Biologiche",
+        "Quadrate"
+    ];
+    $prodotti = [
+        "Le Classiche",
+        "Le Integrali",
+        "Le Speciali",
+        "Le Biologiche",
+        "Le Gluten-Free",
+        "Le Semole",
+        "Le Extra di Lusso",
+    ];
 
     foreach($data as $pasta){
         if($pasta['tipo'] == 'lunga'){
@@ -154,6 +231,10 @@ Route::get('/', function () {
     return view('home', [
         'lunghe' => $lunga,
         'corte' => $corta,
-        'cortissime' => $cortissima
+        'cortissime' => $cortissima,
+        'info' => $info,
+        'pastificio' => $pastifici,
+        'collezione' => $collezioni,
+        'prodotto' => $prodotti
     ]);
 });

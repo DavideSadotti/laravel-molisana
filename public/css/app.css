@@ -22,6 +22,9 @@ body {
   width: 200px;
 }
 
+.main-nav {
+  padding: 15px;
+}
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -37,14 +40,63 @@ body {
   background-color: #b2e5fc;
 }
 
-.cards {
+main {
+  background-image: url("/images/fondo.jpg");
+  background-position: center;
+  padding: 50px 0;
+}
+main section {
+  width: 1200px;
+  margin: auto;
+}
+main section h2 {
+  text-transform: uppercase;
+  color: #002d73;
+  padding-left: 10px;
+}
+main section .cards {
   display: flex;
   flex-wrap: wrap;
 }
-.cards .card {
+main section .cards .card {
   width: calc(100% / 3);
+  padding: 10px;
 }
-.cards .card img {
+main section .cards .card img {
   display: block;
   width: 100%;
+}
+
+footer {
+  background-image: url("/images/footer.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+footer .container {
+  display: flex;
+  padding: 100px 0;
+  color: #848d9b;
+}
+footer .container > div:first-of-type {
+  width: 34%;
+}
+footer .container > div:first-of-type > div {
+  width: 80%;
+}
+footer .container > div:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  width: 66%;
+}
+footer .container > div:last-of-type > div {
+  width: 50%;
+}
+footer .container > div:last-of-type > div h3 {
+  text-transform: uppercase;
+}
+footer .container > div:last-of-type > div ul {
+  margin: 20px 0 30px;
+}
+footer .container li {
+  list-style: none;
 }

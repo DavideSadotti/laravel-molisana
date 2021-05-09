@@ -1,13 +1,31 @@
-.cards{
-    display: flex;
-    flex-wrap: wrap;
+main{
+    background-image: url('/images/fondo.jpg');
+    background-position: center;
+    padding: 50px 0;
 
-    .card{
-        width: calc(100% / 3);
+    section{
+        width: $container;
+        margin: auto;
 
-        img{
-            display: block;
-            width: 100%;
+        h2{
+            text-transform: uppercase;
+            color: $main_color;
+            padding-left: 10px;
+        }
+    
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+        
+            .card{
+                width: calc(100% / 3);
+                padding: 10px;
+        
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
         }
     }
 }
