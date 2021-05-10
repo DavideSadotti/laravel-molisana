@@ -69,6 +69,8 @@ Route::get('prodotto/{id}', function($id){
     $pastifici = config('pastifici');
     $collezioni = config('collezioni');
     $prodotti = config('prodotti');
+    $next = $id == (count($data) -1) ? 0 : $id + 1;
+    $prev = $id == 0 ? count($data) - 1 : $id - 1;
 
     if($id >= count($data)){
         abort(404);
@@ -81,6 +83,8 @@ Route::get('prodotto/{id}', function($id){
         'info' => $info,
         'pastificio' => $pastifici,
         'collezione' => $collezioni,
-        'prodotto' => $prodotti
+        'prodotto' => $prodotti,
+        'next' => $next,
+        'prev' => $prev
     ]);
 })->where('id', '[0-9]+')->name('prodotto');

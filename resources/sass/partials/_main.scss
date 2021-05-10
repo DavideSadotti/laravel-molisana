@@ -40,6 +40,7 @@
 
 .sfondo_prodotto{
     background-color: $product_color;
+    position: relative;
 
     .container{
 
@@ -57,6 +58,37 @@
             color: $main_color;
             padding: 50px 10px;
             font-weight: 600;
+        }
+
+        .chevron{
+            a{
+                position: absolute;
+                top: 50%;
+                background-color: rgba(255,255,255,.5);
+                transform: translateY(-50%);
+
+                i{
+                    font-size: 50px;
+                    color: white;
+                    padding: 20px 10px;
+                }
+
+                @media screen and(max-width: 600px){
+                    top: 40%;
+                }
+            }
+
+            a:first-of-type{
+                left: 0;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            a:last-of-type{
+                right: 0;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
         }
     }
 }
