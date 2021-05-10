@@ -1,10 +1,10 @@
-main{
+.sfondo_home{
     background-image: url('/images/fondo.jpg');
     background-position: center;
     padding: 50px 0;
 
     section{
-        width: $container;
+        max-width: $container;
         margin: auto;
 
         h2{
@@ -20,12 +20,43 @@ main{
             .card{
                 width: calc(100% / 3);
                 padding: 10px;
-        
+
                 img{
                     display: block;
                     width: 100%;
                 }
+
+                @media screen and(max-width: 1000px){
+                    width: 50%;
+                }
+
+                @media screen and(max-width: 600px){
+                    width: 100%;
+                }
             }
+        }
+    }
+}
+
+.sfondo_prodotto{
+    background-color: $product_color;
+
+    .container{
+
+        h1{
+            color: $main_color;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        p{
+            color: $main_color;
+            padding: 50px 10px;
+            font-weight: 600;
         }
     }
 }

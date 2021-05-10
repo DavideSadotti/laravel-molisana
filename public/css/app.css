@@ -40,31 +40,58 @@ body {
   background-color: #b2e5fc;
 }
 
-main {
+.sfondo_home {
   background-image: url("/images/fondo.jpg");
   background-position: center;
   padding: 50px 0;
 }
-main section {
-  width: 1200px;
+.sfondo_home section {
+  max-width: 1200px;
   margin: auto;
 }
-main section h2 {
+.sfondo_home section h2 {
   text-transform: uppercase;
   color: #002d73;
   padding-left: 10px;
 }
-main section .cards {
+.sfondo_home section .cards {
   display: flex;
   flex-wrap: wrap;
 }
-main section .cards .card {
+.sfondo_home section .cards .card {
   width: calc(100% / 3);
   padding: 10px;
 }
-main section .cards .card img {
+.sfondo_home section .cards .card img {
   display: block;
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .sfondo_home section .cards .card {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sfondo_home section .cards .card {
+    width: 100%;
+  }
+}
+
+.sfondo_prodotto {
+  background-color: #B8DAE4;
+}
+.sfondo_prodotto .container h1 {
+  color: #002d73;
+  text-align: center;
+  padding: 50px 0;
+}
+.sfondo_prodotto .container img {
+  width: 100%;
+}
+.sfondo_prodotto .container p {
+  color: #002d73;
+  padding: 50px 10px;
+  font-weight: 600;
 }
 
 footer {
@@ -74,7 +101,8 @@ footer {
 }
 footer .container {
   display: flex;
-  padding: 100px 0;
+  flex-wrap: wrap;
+  padding: 100px 10px;
   color: #848d9b;
 }
 footer .container > div:first-of-type {
@@ -82,6 +110,22 @@ footer .container > div:first-of-type {
 }
 footer .container > div:first-of-type > div {
   width: 80%;
+}
+@media screen and (max-width: 1000px) {
+  footer .container > div:first-of-type > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .container > div:first-of-type {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .container > div:first-of-type {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 footer .container > div:last-of-type {
   display: flex;
@@ -97,6 +141,26 @@ footer .container > div:last-of-type > div h3 {
 footer .container > div:last-of-type > div ul {
   margin: 20px 0 30px;
 }
+@media screen and (max-width: 1000px) {
+  footer .container > div:last-of-type > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .container > div:last-of-type {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .container > div:last-of-type {
+    width: 100%;
+  }
+}
 footer .container li {
   list-style: none;
+}
+@media screen and (max-width: 600px) {
+  footer .container {
+    text-align: center;
+  }
 }
